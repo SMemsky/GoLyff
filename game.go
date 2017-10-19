@@ -11,7 +11,7 @@ import (
 const (
 	appName string = "Go Lyff"
 	screenWidth, screenHeight int = 640, 640
-	framesPerSecond = 10
+	framesPerSecond = 100
 
 	fieldWidth, fieldHeight int = 64, 64
 	updatesPerSecond = 200000	
@@ -147,8 +147,6 @@ func cellId(x, y int) int {
 }
 
 func (g *game) draw() {
-	fmt.Println("Draw")
-
 	gl.Clear(gl.COLOR_BUFFER_BIT)
 
 	g.drawField()
